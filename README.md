@@ -410,12 +410,8 @@ Abrir no navegador:
 http://localhost:3001
 ```
 
-Resposta:
-
 ```text
-{
-  "mensagem": "API funcionando"
-}
+http://localhost:3001/usuarios
 ```
 
 ---
