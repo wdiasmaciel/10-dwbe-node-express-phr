@@ -27,12 +27,17 @@ npm install -g npm@11.19.0
 ```bash
 npm -v
 ```
+---
 
 Criar o arquivo `.gitignore`:
  
 ```text
 node_modules/
 ```
+
+---
+
+Iniciar o projeto:
 
 ```bash
 npm init -y
@@ -202,7 +207,66 @@ http://localhost:3000/usuarios
     "id": 2,
     "nome": "Maria"
   }
-]```
+]
+```
+
+---
+
+## Atualização Automática do Servidor
+
+Atualização automática do servidor em caso de alteração do arquivo.
+
+Atualizar o arquivo `package.json` adicionando a diretiva `dev1`:
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1" : "node --watch 01-server.js"
+  }
+```
+
+```json
+{
+  "name": "10-dwbe-node-express-phr",
+  "version": "1.0.0",
+  "description": "Link:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1" : "node --watch 01-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdiasmaciel/10-dwbe-node-express-phr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr/issues"
+  },
+  "homepage": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
+```
+
+Executar novamente o servidor digitando no terminal:
+
+```bash
+npm run dev1
+```
+
+## Teste
+
+Instale a extensão `Rest Client` no `VS Code`:
+
+![Rest Client](restclient.png)
+
+Crie o arquivo `teste.http`:
+
 
 ---
 
@@ -253,60 +317,6 @@ Resposta:
 ```
 
 ---
-
-## Atualização Automática do Servidor
-
-Atualização automática do servidor em caso de alteração do arquivo.
-
-Atualizar o arquivo `package.json` adicionando a diretiva `dev1` e `dev2`:
-
-```json
-"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev1" : "node --watch 01-server.js",
-    "dev2" : "node --watch 02-server.js"
-  }
-```
-
-```json
-{
-  "name": "api-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev1": "node --watch 01-server.js",
-    "dev2": "node --watch 02-server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "express": "^5.3.0"
-  }
-}
-```
-
-Executar novamente os servidores digitando no terminal:
-
-```bash
-npm run dev1
-```
-
-```bash
-npm run dev2
-```
-
-## Teste
-
-Instale a extensão `Rest Client` no `VS Code`:
-
-![Rest Client](restclient.png)
-
-Crie o arquivo `teste.http`:
-
 
 ## Exercício
 
