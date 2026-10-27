@@ -28,12 +28,10 @@ npm install -g npm@11.19.0
 npm -v
 ```
 
-```bash
-mkdir api-express
-```
-
-```bash
-cd api-express
+Criar o arquivo `.gitignore`:
+ 
+```text
+node_modules/
 ```
 
 ```bash
