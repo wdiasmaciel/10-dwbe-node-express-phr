@@ -385,7 +385,7 @@ Criar o arquivo:
 
 ```js
 import express from 'express';
-import usuarioRoutes from "./routes/usuarioRoutes";
+import usuarioRoutes from "./routes/usuarioRoutes.js";
 
 const app = express();
 
