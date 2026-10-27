@@ -32,6 +32,17 @@ app.get("/usuarios/:id", (req, res) => {
   res.json(usuario);
 });
 
+app.post("/usuarios", (req, res) => {
+  const novoUsuario = {
+    id: usuarios.length + 1,
+    nome: req.body.nome,
+  };
+
+  usuarios.push(novoUsuario);
+
+  res.status(201).json(novoUsuario);
+});
+
 app.put("/usuarios/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
