@@ -40,22 +40,6 @@ npm init -y
 
 No arquivo `package.json`, substituir ` "type": "commonjs"` por ` "type": "module"`:
 
-```text
-{
-  "name": "api-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module"
-}
-```
-
 Instalar o `Express`:
 
 ```bash
@@ -64,17 +48,25 @@ npm install express
 
 ```js
 {
-  "name": "api-express",
+  "name": "10-dwbe-node-express-phr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Link:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdiasmaciel/10-dwbe-node-express-phr.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr/issues"
+  },
+  "homepage": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr#readme",
   "dependencies": {
     "express": "^5.3.0"
   }
