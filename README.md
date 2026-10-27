@@ -267,6 +267,40 @@ Instale a extensão `Rest Client` no `VS Code`:
 
 Crie o arquivo `teste.http`:
 
+```js
+@baseUrl = http://localhost:3000
+
+### API funcionando
+GET {{baseUrl}}/
+
+### Listar todos os usuários
+GET {{baseUrl}}/usuarios
+
+### Buscar usuário existente
+GET {{baseUrl}}/usuarios/1
+
+### Buscar usuário inexistente
+GET {{baseUrl}}/usuarios/999
+
+### Criar usuário
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ana"
+}
+
+### Atualizar usuário
+PUT {{baseUrl}}/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "João Silva"
+}
+
+### Remover usuário
+DELETE {{baseUrl}}/usuarios/2
+```
 
 ---
 
