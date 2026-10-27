@@ -180,15 +180,18 @@ Abrir no navegador:
 http://localhost:3000
 ```
 
-Resposta para rota `/`:
-
 ```text
 {
   "mensagem": "API funcionando"
 }
 ```
 
-Resposta para rota `/usuarios`:
+Abrir no navegador:
+
+```text
+http://localhost:3000/usuarios
+```
+
 ```text
 [
   {
@@ -200,6 +203,7 @@ Resposta para rota `/usuarios`:
     "nome": "Maria"
   }
 ]```
+
 ---
 
 ## Servidor 02
