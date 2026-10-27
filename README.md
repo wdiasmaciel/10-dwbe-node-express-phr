@@ -618,15 +618,33 @@ ou
 npm run dev3
 ```
 
+## Teste
+
+Criar o arquivo `teste3.http`:
+
+```js
+@baseUrl = http://localhost:3000
+
+### Rota pública
+GET {{baseUrl}}/
+
+### Listar usuários sem autorização
+GET {{baseUrl}}/usuarios
+
+### Listar usuários com autorização
+GET {{baseUrl}}/usuarios
+Authorization: 123
+```
 
 ---
 
 ## Exercício
 
-Usando Express, crie um servidor com rotas em arquivo separado que aceite requisições para retornar em formato `JSON`:
+Usando Express, crie um servidor com rotas em arquivo separado e middlewares que aceite requisições para retornar em formato `JSON`:
 
 1. Os nomes dos cursos de uma universidade.
 2. Os nomes das disciplinas dos cursos.
 3. Os nomes dos alunos matriculados em cada disciplina.
+4. Os nomes dos professores de cada disciplina.
 
 Teste a API criando um arquivo `.http` para a extensão `Rest Client`.
