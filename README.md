@@ -306,6 +306,35 @@ DELETE {{baseUrl}}/usuarios/2
 
 ## Servidor 02
 
+Criar a pasta `routes`.
+
+Dento da pasta `routes`, criar o arquivo `usuarioRoutes.js`: 
+
+```js
+import express from 'express';
+
+const router = express.Router();
+
+let usuarios = [];
+
+router.get("/", (req, res) => {
+  res.json(usuarios);
+});
+
+router.post("/", (req, res) => {
+  const usuario = {
+    id: usuarios.length + 1,
+    nome: req.body.nome,
+  };
+
+  usuarios.push(usuario);
+
+  res.status(201).json(usuario);
+});
+
+export default router;
+```
+
 Criar o arquivo:
 
 ```jsx
