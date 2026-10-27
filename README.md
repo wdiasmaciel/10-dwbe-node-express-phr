@@ -414,6 +414,42 @@ http://localhost:3001
 http://localhost:3001/usuarios
 ```
 
+## Teste
+
+Crie o arquivo `teste2.http`:
+
+```js
+@baseUrl = http://localhost:3001
+
+### Listar usuários
+GET {{baseUrl}}/usuarios
+
+### Criar usuário
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ana"
+}
+
+### Buscar usuário existente
+GET {{baseUrl}}/usuarios/1
+
+### Buscar usuário inexistente
+GET {{baseUrl}}/usuarios/999
+
+### Atualizar usuário
+PUT {{baseUrl}}/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "Ana Silva"
+}
+
+### Remover usuário
+DELETE {{baseUrl}}/usuarios/1
+```
+
 ---
 
 ## Exercício
