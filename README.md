@@ -87,9 +87,21 @@ Criar o arquivo:
 import express from 'express';
 
 const app = express();
+app.use(express.json());
+
+let usuarios = [
+    { id:1, nome:"João" },
+    { id:2, nome:"Maria" }
+];
 
 app.get("/", (req, res) => {
-  res.send("API funcionando!");
+  res.json({
+    mensagem: "API funcionando",
+  });
+});
+
+app.get("/usuarios", (req, res) => {
+  res.json(usuarios);
 });
 
 app.listen(3000, () => {
@@ -109,11 +121,26 @@ Abrir no navegador:
 http://localhost:3000
 ```
 
-Resposta:
+Resposta para rota `/`:
 
 ```text
-API funcionando!
+{
+  "mensagem": "API funcionando"
+}
 ```
+
+Resposta para rota `/usuarios`:
+```text
+[
+  {
+    "id": 1,
+    "nome": "João"
+  },
+  {
+    "id": 2,
+    "nome": "Maria"
+  }
+]```
 ---
 
 ## Servidor 02
