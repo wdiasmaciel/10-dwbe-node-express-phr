@@ -8,5 +8,5 @@ app.use(express.json());
 app.use("/usuarios", usuarioRoutes);
 
 app.listen(3001, () => {
-  console.log("Servidor rodando");
+  console.log("Servidor rodando!");
 });

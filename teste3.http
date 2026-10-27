@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:3000
+
+### Rota pública
+GET {{baseUrl}}/
+
+### Listar usuários sem autorização
+GET {{baseUrl}}/usuarios
+
+### Listar usuários com autorização
+GET {{baseUrl}}/usuarios
+Authorization: 123

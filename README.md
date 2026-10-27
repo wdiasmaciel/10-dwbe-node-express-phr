@@ -454,7 +454,7 @@ DELETE {{baseUrl}}/usuarios/1
 
 ## Exercício
 
-Usando Express, crie um servidor que aceite requisições para retornar em formato `JSON`:
+Usando Express, crie um servidor com rotas em arquivo separado que aceite requisições para retornar em formato `JSON`:
 
 1. Os nomes dos cursos de uma universidade.
 2. Os nomes das disciplinas dos cursos.
