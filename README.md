@@ -576,6 +576,36 @@ Atualizar o arquivo `package.json` adicionando a diretiva `dev3`:
   }
 ```
 
+```js
+{
+  "name": "10-dwbe-node-express-phr",
+  "version": "1.0.0",
+  "description": "Link:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev1" : "node --watch 01-server.js",
+    "dev2" : "node --watch 02-server.js",
+    "dev3" : "node --watch 03-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdiasmaciel/10-dwbe-node-express-phr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr/issues"
+  },
+  "homepage": "https://github.com/wdiasmaciel/10-dwbe-node-express-phr#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
+```
+
 Rodar o servidor 3:
 
 ```bash

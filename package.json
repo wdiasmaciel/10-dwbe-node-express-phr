@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev1" : "node --watch 01-server.js",
-    "dev2" : "node --watch 02-server.js"
+    "dev2" : "node --watch 02-server.js",
+    "dev3" : "node --watch 03-server.js"
   },
   "repository": {
     "type": "git",
