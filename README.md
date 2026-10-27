@@ -457,6 +457,18 @@ Atualizar o arquivo `package.json` adicionando a diretiva `dev2`:
 }
 ```
 
+Para rodar, execute:
+
+```bash
+node 02-server.js
+```
+
+ou
+
+```bash
+npm run dev2
+```
+
 ## Teste
 
 Crie o arquivo `teste2.http`:
@@ -497,6 +509,57 @@ DELETE {{baseUrl}}/usuarios/1
 
 ## Sevidor 3
 
+Criar a pasta `middleware`.
+
+Dentro da pasta `middleware` criar o arquivo `usuarioMiddleware.js`:
+
+```js
+export function log(req, res, next) {
+  console.log("Requisição recebida");
+  next();
+}
+
+export function auth(req, res, next) {
+  const token = req.headers.authorization;
+
+  if (token !== "123") {
+    return res.status(401).json({
+      erro: "Não autorizado",
+    });
+  }
+
+  next();
+}
+```
+
+Criar o arquivo `03-server.js`:
+
+```js
+import express from 'express';
+import { log, auth } from './middleware/usuarioMiddleware.js';
+
+const app = express();
+app.use(express.json());
+
+let usuarios = [
+    { id:1, nome:"João" },
+    { id:2, nome:"Maria" }
+];
+
+app.get("/", log, (req, res) => {
+  res.json({
+    mensagem: "API funcionando",
+  });
+});
+
+app.get("/usuarios", log, auth, (req, res) => {
+  res.json(usuarios);
+});
+
+app.listen(3002, () => {
+  console.log("Servidor rodando!");
+});
+```
 
 ## Atualização Automática do Servidor
 
@@ -511,6 +574,18 @@ Atualizar o arquivo `package.json` adicionando a diretiva `dev3`:
     "dev2" : "node --watch 02-server.js",
     "dev3" : "node --watch 03-server.js"
   }
+```
+
+Rodar o servidor 3:
+
+```bash
+node 03-server.js
+```
+
+ou
+
+```bash
+npm run dev3
 ```
 
 
